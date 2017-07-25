@@ -30,8 +30,8 @@ describe("Park", function() {
     assert.strictEqual(park.enclosure.length, 4);
   })
 
-  // it("should get all dinos with more than 2 weans", function() {
-  //   park.findDinoWithMoreThanTwo().length;
-  //   assert.strictEqual(park)
-  // })
+  it("should get all dinos with more than 2 weans", function() {
+    park.findDinoWithMoreThanTwo();
+    assert.strictEqual(park.moreThanTwo.length, 2);
+  })
 })

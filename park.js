@@ -1,5 +1,6 @@
 var Park = function() {
   this.enclosure = [];
+  this.moreThanTwo = [];
 }
 
 Park.prototype = {
@@ -17,7 +18,12 @@ Park.prototype = {
     }
   },
   findDinoWithMoreThanTwo: function() {
-    
+    for(var i =0; i < this.enclosure.length; i++) {
+      var dinosaur = this.enclosure[i];
+      if (dinosaur.numOfWeans > 2) {
+        this.moreThanTwo.push(dinosaur);
+      }
+    }
   }
 }
 
