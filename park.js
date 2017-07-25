@@ -24,7 +24,25 @@ Park.prototype = {
         this.moreThanTwo.push(dinosaur);
       }
     }
+  },
+  totalDino: function() {
+    var totalDinos = 0;
+    for(var i = 0; i< this.enclosure.length; i++) {
+      var dinosaur = this.enclosure[i];
+        totalDinos += dinosaur.numOfWeans;
+    }
+    return totalDinos + this.enclosure.length;
+  },
+  twoYearDino: function() {
+      var dinos = 0;
+      for(var i = 0; i< this.enclosure.length; i++) {
+        var dinosaur = this.enclosure[i];
+          dinos += dinosaur.numOfWeans;
+      }
+      var totalDino = dinos * 2;
+      return totalDino + this.enclosure.length;
   }
+
 }
 
 module.exports = Park;

@@ -34,4 +34,12 @@ describe("Park", function() {
     park.findDinoWithMoreThanTwo();
     assert.strictEqual(park.moreThanTwo.length, 2);
   })
+
+  it("should get all the dinosaurs after one year", function() {
+    assert.strictEqual(park.totalDino(), 65);
+  })
+
+  it("should get number of dinosaurs after two years", function() {
+    assert.strictEqual(park.twoYearDino(), 124)
+  })
 })
